@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "channel": "C00001",
+  "ts": "1449311659.000030",
+  "message": {
+    "text": "message",
+    "username": "bot",
+    "type": "message",
+    "subtype": "bot_message",
+    "ts": "1449311659.000030"
+  }
+}

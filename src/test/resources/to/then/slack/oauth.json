@@ -1,0 +1,7 @@
+{
+    "ok": true,
+    "access_token": "xoxp-1234567890abcd",
+    "scope": "identify,chat:write:bot",
+    "team_name": "Team",
+    "team_id": "TEAM01"
+}
