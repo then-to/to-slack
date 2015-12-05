@@ -79,6 +79,7 @@
                             <goal>shade</goal>
                         </goals>                        
                         <configuration>
+                            <outputFile>${project.build.directory}/${project.groupId}/${project.version}/${project.build.finalName}.jar</outputFile>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <minimizeJar>false</minimizeJar>
                         </configuration>
