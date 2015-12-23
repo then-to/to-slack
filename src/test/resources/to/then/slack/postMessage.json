@@ -1,9 +1,0 @@
-{
-    "chat.postMessage": {
-        "token": {
-            "$ref": "s3://bucket/slack/oauth#/access_token"
-        },
-        "channel": "#channel",
-        "text": "message"
-    }
-}
