@@ -1,0 +1,27 @@
+{
+  "name": "to-slack",
+  "version": "0.1.0",
+  "description": "Call Slack Web API methods from AWS Lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/then-to/to-slack.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "slack"
+  ],
+  "author": "mpsullivan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/then-to/to-slack/issues"
+  },
+  "homepage": "https://github.com/then-to/to-slack",
+  "dependencies": {
+    "uri-templates": "^0.1.9"
+  }
+}
