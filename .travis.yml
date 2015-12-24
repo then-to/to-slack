@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "0.10"
+  - "4.1"
 deploy:
   provider: s3
   access_key_id: AKIAJRXSZUVEN6MH27RQ
