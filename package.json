@@ -4,7 +4,8 @@
   "description": "Call Slack Web API methods from AWS Lambda",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "posttest": "zip to-slack.zip index.js"
   },
   "repository": {
     "type": "git",

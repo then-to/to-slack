@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "4.1"
+before_deploy:
+  - mkdir dist
+  - zip -r dist/to-slack.zip index.js node_modules
 deploy:
   provider: s3
   access_key_id: AKIAJRXSZUVEN6MH27RQ
@@ -8,7 +11,8 @@ deploy:
     secure: UPFjppCsT7vo3AB3tqLZyFC3BHGIjDbEVeN/OAvw4rbwKuFJ/Y7nQ+/YdOOZKD+PXIx0V96KmXOHmRY/3hd/wzBk/w9G3gQz1Nxb1/0iktdgu/ynCFMaJ2AUi4hbSennP70mbq1ak8m+fVYHXO0OoRUZCMWyt2bZnllTQiPkDq/KboAiH8VqIq5shrCa7oOpZNEya0vs2PR0ZSkQ6joMp6o2O1BjuThfBlRKIRHh+W8OZLMsR6F/rxNrg5KfQIBLGdbN7wvXS0aVCsMM/0cFwY/LnyXsmWRA2okNQYKrImg5BpFGHhY3Blna85itFECNGoDVX+ftt5VRK9lqvdSwSTcI59NLL/4MFr4O2d2TNWw2HuBqJA69JqFIw4wXQRqNoSX+sqhjwKBd431a/BdDRdMlv8Vo78Yw7EN9t5L9EDDgTk77BQEzLq+adQpX7xnLMFOlkqwlxyRiIwy0XmXI7F2/Y2XLPAHMuzrAd6jczKV92xWwHiwXG/h82UDTvYz2adBo0bEefqa/NNN9uhf7Db/6iIVS2tSaMc1Md7dT/+7s+S7WRbHSHl2PUHZjG3GcJthWif0I32V7UzEG9b1QrOSordkBXBCMMOCBmoBV84NgfvzIi+Oy5RVGLANlAKn1KgPyftR5mlpyWYxSWaeYbhDtkw5qBA7VIWimCu9o0DU=
   bucket: deploy.then.to
   skip_cleanup: true
-  upload-dir: slack
+  upload-dir: slack/0.1.0
+  local_dir: dist
   acl: public_read
   on:
     repo: then-to/to-slack
