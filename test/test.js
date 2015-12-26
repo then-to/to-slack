@@ -24,7 +24,7 @@ describe("Post chat message", function() {
     }, {
       succeed: function(data) {
         console.log(data);
-        assert.ok(data.ok, 'is ok');
+        assert.ok(data.result.ok, 'is ok');
         done();
       },
       fail: function(error) {
@@ -47,7 +47,7 @@ describe("Post chat message", function() {
       },
       succeed: function(data) {
         console.log(data);
-        assert.ok(data.ok, 'is ok');
+        assert.ok(data.result.ok, 'is ok');
         done();
       },
       fail: function(error) {

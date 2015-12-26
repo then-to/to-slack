@@ -40,7 +40,8 @@ exports.handler = function(event, context) {
       body += chunk;
     });
     res.on('end', function() {
-      context.succeed(JSON.parse(body));
+      event.result = JSON.parse(body);
+      context.succeed(event);
     });
   });
   req.on('error', context.fail);
