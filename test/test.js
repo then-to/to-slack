@@ -17,7 +17,7 @@ describe("Post chat message", function() {
     index.handler({
       method: 'chat.postMessage',
       token: 'xoxp-1234567890-1234567890-1234567890-1234567890',
-      data: {
+      params: {
         channel: '#sysops',
         text: 'test1'
       }
@@ -35,7 +35,7 @@ describe("Post chat message", function() {
   it("With clientContext token - should return ok", function(done) {
     index.handler({
       method: 'chat.postMessage',
-      data: {
+      params: {
         channel: '#sysops',
         text: 'test2'
       }

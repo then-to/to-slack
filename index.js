@@ -6,7 +6,8 @@ var template = uriTemplates("/api/{method}{?token}");
 
 exports.handler = function(event, context) {
 
-  var formData = querystring.stringify(event.data);
+  var formData = querystring.stringify(event.params);
+
   var token = event.token;
 
   if (context.clientContext !== undefined &&
